@@ -4,7 +4,8 @@ Kubernetes testing lab for API deployment, performance testing, autoscaling, CI/
 
 ## Architecture
 
-![Architecture: Locust on EC2 sends load through an ALB to a pod on an EKS node; HPA and Cluster Autoscaler scale up to 3 nodes under load; Prometheus and Grafana observe the results](docs/architecture.svg)
+<img width="1214" height="498" alt="image" src="https://github.com/user-attachments/assets/4e7f8399-55db-402e-bd5d-333891a1cc42" />
+
 
 A single EC2 instance runs [Locust](https://locust.io) and sends HTTP load at [`cpu-burning-api`](api/) (a FastAPI service that deliberately burns CPU/memory per request), running on an [EKS](https://aws.amazon.com/eks/) cluster.
 
